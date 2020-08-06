@@ -18,6 +18,10 @@ ${URL}    https://opensource-demo.orangehrmlive.com/
 MyFirstTest
     [Tags]    Regression
     Log    Hello World...
+
+MySecondTest
+    [Tags]    Regression
+    Log    My second test...
     
 # MyFirstSeleniumTest        
     # Open Browser                 https://google.com      ${Browse}
