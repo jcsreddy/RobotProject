@@ -8,10 +8,10 @@ Test Teardown    Log    I am insite Test TearDown
 Default Tags    Smoke         
 
 *** Variables ***
-# ${Browse}    chrome
-# ${URL}    https://opensource-demo.orangehrmlive.com/
-# @{Credentials}    Admin    admin123
-# &{LoginData}    username=Admin    password=admin123
+${Browse}    chrome
+${URL}    https://opensource-demo.orangehrmlive.com/
+@{Credentials}    Admin    admin123
+&{LoginData}    username=Admin    password=admin123
 
 *** Test Cases ***
 MyFirstTest
