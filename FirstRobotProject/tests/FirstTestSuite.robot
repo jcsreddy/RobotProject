@@ -1,4 +1,3 @@
-from selenum import webdriver
 *** Settings ***
 # Library    SeleniumLibrary
 Suite Setup    Log    I am inside Test Suite Setup
