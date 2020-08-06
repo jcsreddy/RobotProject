@@ -1,5 +1,5 @@
 *** Settings ***
-# Library    SeleniumLibrary
+Library    SeleniumLibrary
 Suite Setup    Log    I am inside Test Suite Setup
 Suite Teardown    Log    I am inside Test Suite TearDown   
 Test Setup    Log    I am inside Test Setup    
