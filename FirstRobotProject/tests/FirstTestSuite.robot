@@ -32,7 +32,7 @@ MyFirstTest
 
 MyLastTest
     [Tags]    Sanity
-    Log    I am in the last test
+    Log    I am in the last test....
           
 # SampleLoginTest
     # [Documentation]    This is a sample login test
