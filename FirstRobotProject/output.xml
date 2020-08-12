@@ -1,111 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200812 14:21:33.477" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200812 15:15:08.036" rpa="false">
 <suite id="s1" name="FirstRobotProject" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject">
 <suite id="s1-s1" name="Tests" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests">
-<suite id="s1-s1-s1" name="TC021 SetupTeardown" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests\TC021_SetupTeardown.robot">
-<kw name="Log To Console" library="BuiltIn" type="setup">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Open Browser</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.024" endtime="20200812 14:21:34.024"></status>
-</kw>
-<test id="s1-s1-s1-t1" name="First Test Case">
-<kw name="Log To Console" library="BuiltIn" type="setup">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log into Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.025" endtime="20200812 14:21:34.026"></status>
-</kw>
+<suite id="s1-s1-s1" name="TC022 Tags" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests\TC022_Tags.robot">
+<test id="s1-s1-s1-t1" name="TC01 User Registration">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>This is First Test Case</arg>
+<arg>This is User Registration Test</arg>
 </arguments>
-<status status="PASS" starttime="20200812 14:21:34.026" endtime="20200812 14:21:34.027"></status>
+<status status="PASS" starttime="20200812 15:15:08.163" endtime="20200812 15:15:08.164"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log out of Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.028" endtime="20200812 14:21:34.030"></status>
-</kw>
-<status status="PASS" starttime="20200812 14:21:34.024" endtime="20200812 14:21:34.031" critical="yes"></status>
+<status status="PASS" starttime="20200812 15:15:08.162" endtime="20200812 15:15:08.164" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t2" name="Second Test Case">
-<kw name="Log To Console" library="BuiltIn" type="setup">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log into Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.032" endtime="20200812 14:21:34.032"></status>
-</kw>
+<test id="s1-s1-s1-t2" name="TC02 Login Test">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>This is Second Test Case</arg>
+<arg>This is Login Test</arg>
 </arguments>
-<status status="PASS" starttime="20200812 14:21:34.033" endtime="20200812 14:21:34.033"></status>
+<status status="PASS" starttime="20200812 15:15:08.165" endtime="20200812 15:15:08.166"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log out of Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.033" endtime="20200812 14:21:34.034"></status>
-</kw>
-<status status="PASS" starttime="20200812 14:21:34.031" endtime="20200812 14:21:34.034" critical="yes"></status>
+<status status="PASS" starttime="20200812 15:15:08.165" endtime="20200812 15:15:08.166" critical="yes"></status>
 </test>
-<test id="s1-s1-s1-t3" name="Third Test Case">
-<kw name="Log To Console" library="BuiltIn" type="setup">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log into Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.035" endtime="20200812 14:21:34.035"></status>
-</kw>
+<test id="s1-s1-s1-t3" name="TC03 Change User Settings">
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>This is Third Test Case</arg>
+<arg>This is Change User Settings</arg>
 </arguments>
-<status status="PASS" starttime="20200812 14:21:34.035" endtime="20200812 14:21:34.036"></status>
+<status status="PASS" starttime="20200812 15:15:08.169" endtime="20200812 15:15:08.169"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>Log out of Application</arg>
-</arguments>
-<status status="PASS" starttime="20200812 14:21:34.036" endtime="20200812 14:21:34.036"></status>
-</kw>
-<status status="PASS" starttime="20200812 14:21:34.034" endtime="20200812 14:21:34.036" critical="yes"></status>
+<status status="PASS" starttime="20200812 15:15:08.167" endtime="20200812 15:15:08.170" critical="yes"></status>
 </test>
-<kw name="Log To Console" library="BuiltIn" type="teardown">
+<test id="s1-s1-s1-t4" name="TC04 Logout Test">
+<kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>Close Browser</arg>
+<arg>This is Logout Test</arg>
 </arguments>
-<status status="PASS" starttime="20200812 14:21:34.037" endtime="20200812 14:21:34.038"></status>
+<status status="PASS" starttime="20200812 15:15:08.172" endtime="20200812 15:15:08.174"></status>
 </kw>
-<status status="PASS" starttime="20200812 14:21:33.561" endtime="20200812 14:21:34.038"></status>
+<status status="PASS" starttime="20200812 15:15:08.171" endtime="20200812 15:15:08.175" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200812 15:15:08.158" endtime="20200812 15:15:08.177"></status>
 </suite>
-<status status="PASS" starttime="20200812 14:21:33.557" endtime="20200812 14:21:34.040"></status>
+<status status="PASS" starttime="20200812 15:15:08.152" endtime="20200812 15:15:08.181"></status>
 </suite>
-<status status="PASS" starttime="20200812 14:21:33.520" endtime="20200812 14:21:34.041"></status>
+<status status="PASS" starttime="20200812 15:15:08.103" endtime="20200812 15:15:08.185"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="0">Critical Tests</stat>
-<stat pass="3" fail="0">All Tests</stat>
+<stat pass="4" fail="0">Critical Tests</stat>
+<stat pass="4" fail="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="0" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
-<stat pass="3" fail="0" id="s1-s1" name="Tests">FirstRobotProject.Tests</stat>
-<stat pass="3" fail="0" id="s1-s1-s1" name="TC021 SetupTeardown">FirstRobotProject.Tests.TC021 SetupTeardown</stat>
+<stat pass="4" fail="0" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
+<stat pass="4" fail="0" id="s1-s1" name="Tests">FirstRobotProject.Tests</stat>
+<stat pass="4" fail="0" id="s1-s1-s1" name="TC022 Tags">FirstRobotProject.Tests.TC022 Tags</stat>
 </suite>
 </statistics>
 <errors>
