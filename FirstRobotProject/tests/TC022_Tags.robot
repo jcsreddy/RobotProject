@@ -8,7 +8,7 @@ TC02 Login Test
     Log To Console    This is Login Test 
     
 TC03 Change User Settings
-    [Tags]    Regresson
+    [Tags]    Regression
     Log To Console    This is Change User Settings    
     
 TC04 Logout Test
