@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200813 12:36:42.158" rpa="false">
+<suite id="s1" name="TC001 LoginTest" source="C:\Users\CHANDRASEKHARJANGA\eclipse-workspace\RobotFramework\ProjectUsingPOM\TestCases\TC001_LoginTest.robot">
+<test id="s1-t1" name="Login Into Application">
+<kw name="Login Template">
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<arg>Admin</arg>
+<arg>admin123</arg>
+</arguments>
+<kw name="Open My Browser" library="KeyWords_Login">
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20200813 12:36:43.138" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200813 12:36:43.138" endtime="20200813 12:36:49.703"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200813 12:36:49.704" endtime="20200813 12:36:51.834"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:43.137" endtime="20200813 12:36:51.834"></status>
+</kw>
+<kw name="Enter UserName" library="KeyWords_Login">
+<arguments>
+<arg>${username}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${text_loginUserName}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20200813 12:36:51.835" level="INFO">Typing text 'Admin' into text field 'xpath://input[@id='txtUsername']'.</msg>
+<status status="PASS" starttime="20200813 12:36:51.835" endtime="20200813 12:36:52.126"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:51.835" endtime="20200813 12:36:52.127"></status>
+</kw>
+<kw name="Enter Password" library="KeyWords_Login">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${text_loginPassword}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20200813 12:36:52.129" level="INFO">Typing password into text field 'xpath://input[@id='txtPassword']'.</msg>
+<msg timestamp="20200813 12:36:52.203" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200813 12:36:52.326" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200813 12:36:52.128" endtime="20200813 12:36:52.326"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:52.127" endtime="20200813 12:36:52.326"></status>
+</kw>
+<kw name="Click Submit Button" library="KeyWords_Login">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_submitButton}</arg>
+</arguments>
+<msg timestamp="20200813 12:36:52.329" level="INFO">Clicking button 'name:Submit'.</msg>
+<status status="PASS" starttime="20200813 12:36:52.328" endtime="20200813 12:36:57.041"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:52.326" endtime="20200813 12:36:57.042"></status>
+</kw>
+<kw name="Verify successful login" library="KeyWords_Login">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20200813 12:36:57.121" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20200813 12:36:57.043" endtime="20200813 12:36:57.121"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current page title equals ``title``.</doc>
+<arguments>
+<arg>OrangeHRM</arg>
+</arguments>
+<msg timestamp="20200813 12:36:57.130" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20200813 12:36:57.121" endtime="20200813 12:36:57.130"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:57.042" endtime="20200813 12:36:57.130"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200813 12:36:57.504" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200813 12:36:57.130" endtime="20200813 12:36:57.505"></status>
+</kw>
+<kw name="Close My Browser" library="KeyWords_Login">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20200813 12:36:57.505" endtime="20200813 12:36:59.889"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:57.505" endtime="20200813 12:36:59.889"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:43.137" endtime="20200813 12:36:59.889"></status>
+</kw>
+<status status="PASS" starttime="20200813 12:36:43.136" endtime="20200813 12:36:59.893" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200813 12:36:42.161" endtime="20200813 12:36:59.901"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="TC001 LoginTest">TC001 LoginTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
