@@ -9,6 +9,7 @@ Handle Tabbed Windows
     click button       xpath=//*[@id="Tabbed"]/a/button         #//a/button[text()='    click   ']
 
     select window       url=http://www.sakinalium.in/       #url, title
+    # select window       Title=Some Text
     sleep   2
 #    wait until page contains        Live Stream Platforms
 #    click element          xpath=//span[text()='Live Stream Platforms']

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200813 12:34:22.221" rpa="false">
-<suite id="s1" name="ProjectUsingPOM" source="C:\Users\CHANDRASEKHARJANGA\eclipse-workspace\RobotFramework\ProjectUsingPOM">
-<suite id="s1-s1" name="TestCases" source="C:\Users\CHANDRASEKHARJANGA\eclipse-workspace\RobotFramework\ProjectUsingPOM\TestCases">
-<suite id="s1-s1-s1" name="TC001 LoginTest" source="C:\Users\CHANDRASEKHARJANGA\eclipse-workspace\RobotFramework\ProjectUsingPOM\TestCases\TC001_LoginTest.robot">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200813 16:51:52.399" rpa="false">
+<suite id="s1" name="ProjectUsingPOM" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM">
+<suite id="s1-s1" name="TestCases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases">
+<suite id="s1-s1-s1" name="TC001 LoginTest" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC001_LoginTest.robot">
 <test id="s1-s1-s1-t1" name="Login Into Application">
 <kw name="Login Template">
 <arguments>
@@ -22,14 +22,14 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200813 12:34:23.193" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20200813 12:34:23.192" endtime="20200813 12:34:29.666"></status>
+<msg timestamp="20200813 16:51:53.841" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20200813 16:51:53.841" endtime="20200813 16:52:00.963"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200813 12:34:29.667" endtime="20200813 12:34:31.800"></status>
+<status status="PASS" starttime="20200813 16:52:00.964" endtime="20200813 16:52:03.103"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:23.191" endtime="20200813 12:34:31.801"></status>
+<status status="PASS" starttime="20200813 16:51:53.840" endtime="20200813 16:52:03.105"></status>
 </kw>
 <kw name="Enter UserName" library="KeyWords_Login">
 <arguments>
@@ -41,10 +41,10 @@
 <arg>${text_loginUserName}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200813 12:34:31.803" level="INFO">Typing text 'Admin' into text field 'xpath://input[@id='txtUsername']'.</msg>
-<status status="PASS" starttime="20200813 12:34:31.802" endtime="20200813 12:34:32.022"></status>
+<msg timestamp="20200813 16:52:03.109" level="INFO">Typing text 'Admin' into text field 'xpath://input[@id='txtUsername']'.</msg>
+<status status="PASS" starttime="20200813 16:52:03.108" endtime="20200813 16:52:03.334"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:31.801" endtime="20200813 12:34:32.022"></status>
+<status status="PASS" starttime="20200813 16:52:03.106" endtime="20200813 16:52:03.336"></status>
 </kw>
 <kw name="Enter Password" library="KeyWords_Login">
 <arguments>
@@ -56,12 +56,12 @@
 <arg>${text_loginPassword}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200813 12:34:32.024" level="INFO">Typing password into text field 'xpath://input[@id='txtPassword']'.</msg>
-<msg timestamp="20200813 12:34:32.066" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200813 12:34:32.125" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200813 12:34:32.023" endtime="20200813 12:34:32.125"></status>
+<msg timestamp="20200813 16:52:03.338" level="INFO">Typing password into text field 'xpath://input[@id='txtPassword']'.</msg>
+<msg timestamp="20200813 16:52:03.439" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200813 16:52:03.600" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200813 16:52:03.337" endtime="20200813 16:52:03.600"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:32.023" endtime="20200813 12:34:32.126"></status>
+<status status="PASS" starttime="20200813 16:52:03.336" endtime="20200813 16:52:03.601"></status>
 </kw>
 <kw name="Click Submit Button" library="KeyWords_Login">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -69,10 +69,10 @@
 <arguments>
 <arg>${btn_submitButton}</arg>
 </arguments>
-<msg timestamp="20200813 12:34:32.128" level="INFO">Clicking button 'name:Submit'.</msg>
-<status status="PASS" starttime="20200813 12:34:32.127" endtime="20200813 12:34:36.393"></status>
+<msg timestamp="20200813 16:52:03.603" level="INFO">Clicking button 'name:Submit'.</msg>
+<status status="PASS" starttime="20200813 16:52:03.603" endtime="20200813 16:52:08.428"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:32.127" endtime="20200813 12:34:36.394"></status>
+<status status="PASS" starttime="20200813 16:52:03.601" endtime="20200813 16:52:08.429"></status>
 </kw>
 <kw name="Verify successful login" library="KeyWords_Login">
 <kw name="Page Should Contain" library="SeleniumLibrary">
@@ -80,40 +80,40 @@
 <arguments>
 <arg>Dashboard</arg>
 </arguments>
-<msg timestamp="20200813 12:34:36.430" level="INFO">Current page contains text 'Dashboard'.</msg>
-<status status="PASS" starttime="20200813 12:34:36.396" endtime="20200813 12:34:36.431"></status>
+<msg timestamp="20200813 16:52:08.454" level="INFO">Current page contains text 'Dashboard'.</msg>
+<status status="PASS" starttime="20200813 16:52:08.431" endtime="20200813 16:52:08.456"></status>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <doc>Verifies that the current page title equals ``title``.</doc>
 <arguments>
 <arg>OrangeHRM</arg>
 </arguments>
-<msg timestamp="20200813 12:34:36.436" level="INFO">Page title is 'OrangeHRM'.</msg>
-<status status="PASS" starttime="20200813 12:34:36.431" endtime="20200813 12:34:36.436"></status>
+<msg timestamp="20200813 16:52:08.464" level="INFO">Page title is 'OrangeHRM'.</msg>
+<status status="PASS" starttime="20200813 16:52:08.458" endtime="20200813 16:52:08.464"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:36.394" endtime="20200813 12:34:36.436"></status>
+<status status="PASS" starttime="20200813 16:52:08.429" endtime="20200813 16:52:08.464"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200813 12:34:36.829" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-14.png"&gt;&lt;img src="selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200813 12:34:36.437" endtime="20200813 12:34:36.829"></status>
+<msg timestamp="20200813 16:52:09.000" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200813 16:52:08.464" endtime="20200813 16:52:09.001"></status>
 </kw>
 <kw name="Close My Browser" library="KeyWords_Login">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200813 12:34:36.830" endtime="20200813 12:34:39.364"></status>
+<status status="PASS" starttime="20200813 16:52:09.003" endtime="20200813 16:52:11.537"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:36.830" endtime="20200813 12:34:39.365"></status>
+<status status="PASS" starttime="20200813 16:52:09.001" endtime="20200813 16:52:11.538"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:23.190" endtime="20200813 12:34:39.365"></status>
+<status status="PASS" starttime="20200813 16:51:53.839" endtime="20200813 16:52:11.540"></status>
 </kw>
-<status status="PASS" starttime="20200813 12:34:23.189" endtime="20200813 12:34:39.366" critical="yes"></status>
+<status status="PASS" starttime="20200813 16:51:53.838" endtime="20200813 16:52:11.540" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200813 12:34:22.289" endtime="20200813 12:34:39.368"></status>
+<status status="PASS" starttime="20200813 16:51:52.484" endtime="20200813 16:52:11.544"></status>
 </suite>
-<status status="PASS" starttime="20200813 12:34:22.286" endtime="20200813 12:34:39.373"></status>
+<status status="PASS" starttime="20200813 16:51:52.480" endtime="20200813 16:52:11.556"></status>
 </suite>
-<status status="PASS" starttime="20200813 12:34:22.259" endtime="20200813 12:34:39.375"></status>
+<status status="PASS" starttime="20200813 16:51:52.456" endtime="20200813 16:52:11.565"></status>
 </suite>
 <statistics>
 <total>

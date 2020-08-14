@@ -1,0 +1,11 @@
+==============================================================================
+TC001 LoginTest                                                               
+==============================================================================
+Login Into Application                                                | FAIL |
+SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81
+------------------------------------------------------------------------------
+TC001 LoginTest                                                       | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\Results\pabot_results\0\output-20200814-142413.xml

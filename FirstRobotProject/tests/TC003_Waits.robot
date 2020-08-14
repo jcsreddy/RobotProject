@@ -1,7 +1,5 @@
 *** Settings ***
-Library     SeleniumLibrary
-
-*** Variables ***
+Library    SeleniumLibrary    
 
 *** Test Cases ***
 #Wait Test Case

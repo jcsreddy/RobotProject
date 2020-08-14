@@ -1,3 +1,6 @@
+*** Settings ***
+Library        OperatingSystem    
+
 *** Test Cases ***
 TC01 User Registration
     [Tags]    Regression
@@ -13,4 +16,8 @@ TC03 Change User Settings
     
 TC04 Logout Test
     [Tags]    Sanity
-    Log To Console    This is Logout Test       
+    Log To Console    This is Logout Test
+
+Environment variables
+    ${OS}=    Get Environment Variable    OS    
+    Log    Current user: ${OS}
