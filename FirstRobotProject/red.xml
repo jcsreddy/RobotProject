@@ -5,6 +5,10 @@
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="DataDriver" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/DataDriver/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/DatabaseLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/RequestsLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="JSONLibrary" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/JSONLibrary/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="certifi" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/certifi/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="urllib3" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/urllib3/__init__.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

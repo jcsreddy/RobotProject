@@ -1,114 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200814 13:37:29.417" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200817 17:14:48.754" rpa="false">
 <suite id="s1" name="FirstRobotProject" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject">
-<suite id="s1-s1" name="Tests" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests">
-<suite id="s1-s1-s1" name="TC023 GetSystemData" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests\TC023_GetSystemData.robot">
-<test id="s1-s1-s1-t1" name="Environment variables">
-<kw name="Get Environment Variable" library="OperatingSystem">
-<doc>Returns the value of an environment variable with the given name.</doc>
+<suite id="s1-s1" name="REST API Test Cases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases">
+<suite id="s1-s1-s1" name="TC005 ValidateJSONFile" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases\TC005_ValidateJSONFile.robot">
+<test id="s1-s1-s1-t1" name="JOSN File Validation">
+<kw name="Load JSON From File" library="JSONLibrary">
+<doc>Load JSON from file.</doc>
 <arguments>
-<arg>COMPUTERNAME</arg>
+<arg>./JSONFiles/example.json</arg>
 </arguments>
 <assign>
-<var>${ComputerName}</var>
+<var>${json_obj}</var>
 </assign>
-<msg timestamp="20200814 13:37:29.514" level="INFO">${ComputerName} = DESKTOP-EFCAI7I</msg>
-<status status="PASS" starttime="20200814 13:37:29.512" endtime="20200814 13:37:29.514"></status>
+<msg timestamp="20200817 17:14:49.159" level="INFO">${json_obj} = {'quiz': {'sport': {'q1': {'question': 'Which one is correct team name in NBA?', 'options': ['New York Bulls', 'Los Angeles Kings', 'Golden State Warriros', 'Huston Rocket'], 'answer': 'Huston Rocket'...</msg>
+<status status="PASS" starttime="20200817 17:14:49.151" endtime="20200817 17:14:49.159"></status>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<doc>Returns the value of an environment variable with the given name.</doc>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
 <arguments>
-<arg>OS</arg>
+<arg>${json_obj}</arg>
+<arg>$.quiz.maths.q2.options[3]</arg>
 </arguments>
 <assign>
-<var>${OperatingSystem}</var>
+<var>${options.value}</var>
 </assign>
-<msg timestamp="20200814 13:37:29.516" level="INFO">${OperatingSystem} = Windows_NT</msg>
-<status status="PASS" starttime="20200814 13:37:29.515" endtime="20200814 13:37:29.516"></status>
+<msg timestamp="20200817 17:14:49.221" level="INFO">${options.value} = ['4']</msg>
+<status status="PASS" starttime="20200817 17:14:49.159" endtime="20200817 17:14:49.221"></status>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<doc>Returns the value of an environment variable with the given name.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>USERNAME</arg>
+<arg>${options.value}</arg>
+</arguments>
+<status status="PASS" starttime="20200817 17:14:49.222" endtime="20200817 17:14:49.222"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${options.value}[0]</arg>
+<arg>4</arg>
+</arguments>
+<status status="PASS" starttime="20200817 17:14:49.222" endtime="20200817 17:14:49.223"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_obj}</arg>
+<arg>$.quiz.maths.q2.options</arg>
 </arguments>
 <assign>
-<var>${TestUserName}</var>
+<var>${question.value}</var>
 </assign>
-<msg timestamp="20200814 13:37:29.517" level="INFO">${TestUserName} = CHANDRASEKHARJANGA</msg>
-<status status="PASS" starttime="20200814 13:37:29.517" endtime="20200814 13:37:29.517"></status>
+<msg timestamp="20200817 17:14:49.257" level="INFO">${question.value} = [['1', '2', '3', '4']]</msg>
+<status status="PASS" starttime="20200817 17:14:49.223" endtime="20200817 17:14:49.258"></status>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<doc>Returns the value of an environment variable with the given name.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>WINDIR</arg>
+<arg>${question.value}</arg>
+</arguments>
+<status status="PASS" starttime="20200817 17:14:49.258" endtime="20200817 17:14:49.259"></status>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<doc>Get Value From JSON using JSONPath</doc>
+<arguments>
+<arg>${json_obj}</arg>
+<arg>$.quiz.maths.q1.answer</arg>
 </arguments>
 <assign>
-<var>${SystemDir}</var>
+<var>${answer.value}</var>
 </assign>
-<msg timestamp="20200814 13:37:29.518" level="INFO">${SystemDir} = C:\windows</msg>
-<status status="PASS" starttime="20200814 13:37:29.518" endtime="20200814 13:37:29.518"></status>
+<msg timestamp="20200817 17:14:49.295" level="INFO">${answer.value} = ['12']</msg>
+<status status="PASS" starttime="20200817 17:14:49.259" endtime="20200817 17:14:49.295"></status>
 </kw>
-<kw name="Get Environment Variable" library="OperatingSystem">
-<doc>Returns the value of an environment variable with the given name.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
 <arguments>
-<arg>PROCESSOR_LEVEL</arg>
+<arg>${answer.value}</arg>
 </arguments>
-<assign>
-<var>${ProcessorLevel}</var>
-</assign>
-<msg timestamp="20200814 13:37:29.519" level="INFO">${ProcessorLevel} = 6</msg>
-<status status="PASS" starttime="20200814 13:37:29.519" endtime="20200814 13:37:29.520"></status>
+<status status="PASS" starttime="20200817 17:14:49.296" endtime="20200817 17:14:49.297"></status>
 </kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
 <arguments>
-<arg>${ComputerName}</arg>
+<arg>${answer.value}[0]</arg>
+<arg>12</arg>
 </arguments>
-<msg timestamp="20200814 13:37:29.521" level="INFO">DESKTOP-EFCAI7I</msg>
-<status status="PASS" starttime="20200814 13:37:29.520" endtime="20200814 13:37:29.521"></status>
+<status status="PASS" starttime="20200817 17:14:49.297" endtime="20200817 17:14:49.298"></status>
 </kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${OperatingSystem}</arg>
-</arguments>
-<msg timestamp="20200814 13:37:29.522" level="INFO">Windows_NT</msg>
-<status status="PASS" starttime="20200814 13:37:29.522" endtime="20200814 13:37:29.522"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${TestUserName}</arg>
-</arguments>
-<msg timestamp="20200814 13:37:29.523" level="INFO">CHANDRASEKHARJANGA</msg>
-<status status="PASS" starttime="20200814 13:37:29.522" endtime="20200814 13:37:29.523"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${SystemDir}</arg>
-</arguments>
-<msg timestamp="20200814 13:37:29.525" level="INFO">C:\windows</msg>
-<status status="PASS" starttime="20200814 13:37:29.523" endtime="20200814 13:37:29.526"></status>
-</kw>
-<kw name="Log" library="BuiltIn">
-<doc>Logs the given message with the given level.</doc>
-<arguments>
-<arg>${ProcessorLevel}</arg>
-</arguments>
-<msg timestamp="20200814 13:37:29.527" level="INFO">6</msg>
-<status status="PASS" starttime="20200814 13:37:29.527" endtime="20200814 13:37:29.528"></status>
-</kw>
-<tags>
-<tag>system</tag>
-</tags>
-<status status="PASS" starttime="20200814 13:37:29.511" endtime="20200814 13:37:29.528" critical="yes"></status>
+<status status="PASS" starttime="20200817 17:14:49.151" endtime="20200817 17:14:49.298" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200814 13:37:29.494" endtime="20200814 13:37:29.530"></status>
+<status status="PASS" starttime="20200817 17:14:48.833" endtime="20200817 17:14:49.299"></status>
 </suite>
-<status status="PASS" starttime="20200814 13:37:29.491" endtime="20200814 13:37:29.533"></status>
+<status status="PASS" starttime="20200817 17:14:48.830" endtime="20200817 17:14:49.301"></status>
 </suite>
-<status status="PASS" starttime="20200814 13:37:29.464" endtime="20200814 13:37:29.535"></status>
+<status status="PASS" starttime="20200817 17:14:48.801" endtime="20200817 17:14:49.303"></status>
 </suite>
 <statistics>
 <total>
@@ -116,12 +102,11 @@
 <stat pass="1" fail="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0">system</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Tests">FirstRobotProject.Tests</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="TC023 GetSystemData">FirstRobotProject.Tests.TC023 GetSystemData</stat>
+<stat pass="1" fail="0" id="s1-s1" name="REST API Test Cases">FirstRobotProject.REST API Test Cases</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="TC005 ValidateJSONFile">FirstRobotProject.REST API Test Cases.TC005 ValidateJSONFile</stat>
 </suite>
 </statistics>
 <errors>
