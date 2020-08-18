@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Rebot 3.2.1 (Python 3.8.5 on win32)" generated="20200818 12:52:21.398" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200818 12:52:16.196" rpa="false">
 <suite id="s1" name="TC001 LoginTest" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC001_LoginTest.robot">
 <test id="s1-t1" name="Login Into Application">
 <kw name="Login Template">
@@ -37,7 +37,6 @@
 <status status="FAIL" starttime="20200818 12:52:17.499" endtime="20200818 12:52:20.922" critical="yes">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 81
 </status>
 </test>
-<doc>[https://pabot.org/?ref=log|Pabot] result from 1 executions.</doc>
 <status status="FAIL" starttime="20200818 12:52:16.198" endtime="20200818 12:52:20.924"></status>
 </suite>
 <statistics>

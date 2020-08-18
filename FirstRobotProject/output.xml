@@ -1,112 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200817 17:14:48.754" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200818 16:10:38.401" rpa="false">
 <suite id="s1" name="FirstRobotProject" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject">
 <suite id="s1-s1" name="REST API Test Cases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases">
-<suite id="s1-s1-s1" name="TC005 ValidateJSONFile" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases\TC005_ValidateJSONFile.robot">
-<test id="s1-s1-s1-t1" name="JOSN File Validation">
-<kw name="Load JSON From File" library="JSONLibrary">
-<doc>Load JSON from file.</doc>
+<suite id="s1-s1-s1" name="TC006 ValidateLiveJSONResponse" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases\TC006_ValidateLiveJSONResponse.robot">
+<test id="s1-s1-s1-t1" name="Validate Live Response">
+<kw name="Create Session" library="RequestsLibrary">
+<doc>Create Session: create a HTTP session to a server</doc>
 <arguments>
-<arg>./JSONFiles/example.json</arg>
+<arg>mysession</arg>
+<arg>${base_url}</arg>
+</arguments>
+<msg timestamp="20200818 16:10:38.908" level="INFO">Creating Session using : alias=mysession, url=https://restcountries.eu, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200818 16:10:38.907" endtime="20200818 16:10:38.908"></status>
+</kw>
+<kw name="Get Request" library="RequestsLibrary">
+<doc>Send a GET request on the session object found using the
+given `alias`</doc>
+<arguments>
+<arg>mysession</arg>
+<arg>${endpoint}${arguement}</arg>
 </arguments>
 <assign>
-<var>${json_obj}</var>
+<var>${response}</var>
 </assign>
-<msg timestamp="20200817 17:14:49.159" level="INFO">${json_obj} = {'quiz': {'sport': {'q1': {'question': 'Which one is correct team name in NBA?', 'options': ['New York Bulls', 'Los Angeles Kings', 'Golden State Warriros', 'Huston Rocket'], 'answer': 'Huston Rocket'...</msg>
-<status status="PASS" starttime="20200817 17:14:49.151" endtime="20200817 17:14:49.159"></status>
+<msg timestamp="20200818 16:10:39.310" level="INFO">GET Request : url=https://restcountries.eu/rest/v2/name/india 
+ path_url=/rest/v2/name/india 
+ headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg timestamp="20200818 16:10:39.311" level="INFO">GET Response : url=https://restcountries.eu/rest/v2/name/india 
+ status=521, reason= 
+ body=&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7]&gt; &lt;html class="no-js ie6 oldie" lang="en-US"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;    &lt;html class="no-js ie7 oldie" lang="en-US"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;    &lt;html class="no-js ie8 oldie" lang="en-US"&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js" lang="en-US"&gt; &lt;!--&lt;![endif]--&gt;
+&lt;head&gt;
+&lt;meta http-equiv="refresh" content="0"&gt;
+
+&lt;title&gt;restcountries.eu | 521: Web server is down&lt;/title&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" /&gt;
+&lt;meta name="robots" content="noindex, nofollow" /&gt;
+&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+&lt;link rel="stylesheet" id="cf_styles-css" href="/cdn-cgi/styles/cf.errors.css" type="text/css" media="screen,projection" /&gt;
+&lt;!--[if lt IE 9]&gt;&lt;link rel="stylesheet" id='cf_styles-ie-css' href="/cdn-cgi/styles/cf.errors.ie.css" type="text/css" media="screen,projection" /&gt;&lt;![endif]--&gt;
+&lt;style type="text/css"&gt;body{margin:0;padding:0}&lt;/style&gt;
+
+
+
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="cf-wrapper"&gt;
+
+    
+
+    &lt;div id="cf-error-details" class="cf-error-details-wrapper"&gt;
+        &lt;div class="cf-wrapper cf-error-overview"&gt;
+            &lt;h1&gt;
+              
+              &lt;span class="cf-error-type"&gt;Error&lt;/span&gt;
+              &lt;span class="cf-error-code"&gt;521&lt;/span&gt;
+              &lt;small class="heading-ray-id"&gt;Ray ID: 5c4b04919c341a15 &amp;bull; 2020-08-18 10:40:38 UTC&lt;/small&gt;
+            &lt;/h1&gt;
+            &lt;h2 class="cf-subheadline"&gt;Web server is down&lt;/h2&gt;
+        &lt;/div&gt;&lt;!-- /.error-overview --&gt;
+        
+        &lt;div class="cf-section cf-highlight cf-status-display"&gt;
+            &lt;div class="cf-wrapper"&gt;
+                &lt;div class="cf-columns cols-3"&gt;
+                  
+&lt;div id="cf-browser-status" class="cf-column cf-status-item cf-browser-status "&gt;
+  &lt;div class="cf-icon-error-container"&gt;
+    &lt;i class="cf-icon cf-icon-browser"&gt;&lt;/i&gt;
+    &lt;i class="cf-icon-status cf-icon-ok"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class="cf-status-desc"&gt;You&lt;/span&gt;
+  &lt;h3 class="cf-status-name"&gt;Browser&lt;/h3&gt;
+  &lt;span class="cf-status-label"&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id="cf-cloudflare-status" class="cf-column cf-status-item cf-cloudflare-status "&gt;
+  &lt;div class="cf-icon-error-container"&gt;
+    &lt;i class="cf-icon cf-icon-cloud"&gt;&lt;/i&gt;
+    &lt;i class="cf-icon-status cf-icon-ok"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class="cf-status-desc"&gt;Singapore&lt;/span&gt;
+  &lt;h3 class="cf-status-name"&gt;Cloudflare&lt;/h3&gt;
+  &lt;span class="cf-status-label"&gt;Working&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div id="cf-host-status" class="cf-column cf-status-item cf-host-status cf-error-source"&gt;
+  &lt;div class="cf-icon-error-container"&gt;
+    &lt;i class="cf-icon cf-icon-server"&gt;&lt;/i&gt;
+    &lt;i class="cf-icon-status cf-icon-error"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;span class="cf-status-desc"&gt;restcountries.eu&lt;/span&gt;
+  &lt;h3 class="cf-status-name"&gt;Host&lt;/h3&gt;
+  &lt;span class="cf-status-label"&gt;Error&lt;/span&gt;
+&lt;/div&gt;
+
+                &lt;/div&gt;
+              
+            &lt;/div&gt;
+        &lt;/div&gt;&lt;!-- /.status-display --&gt;
+
+        &lt;div class="cf-section cf-wrapper"&gt;
+            &lt;div class="cf-columns two"&gt;
+                &lt;div class="cf-column"&gt;
+                    &lt;h2&gt;What happened?&lt;/h2&gt;
+                    &lt;p&gt;The web server is not returning a connection. As a result, the web page is not displaying.&lt;/p&gt;
+                &lt;/div&gt;
+              
+                &lt;div class="cf-column"&gt;
+                    &lt;h2&gt;What can I do?&lt;/h2&gt;
+                          &lt;h5&gt;If you are a visitor of this website:&lt;/h5&gt;
+      &lt;p&gt;Please try again in a few minutes.&lt;/p&gt;
+
+      &lt;h5&gt;If you are the owner of this website:&lt;/h5&gt;
+      &lt;p&gt;&lt;span&gt;Contact your hosting provider letting them know your web server is not responding.&lt;/span&gt; &lt;a href="https://support.cloudflare.com/hc/en-us/articles/200171916-Error-521"&gt;Additional troubleshooting information&lt;/a&gt;.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+              
+        &lt;/div&gt;&lt;!-- /.section --&gt;
+
+        &lt;div class="cf-error-footer cf-wrapper"&gt;
+  &lt;p&gt;
+    &lt;span class="cf-footer-item"&gt;Cloudflare Ray ID: &lt;strong&gt;5c4b04919c341a15&lt;/strong&gt;&lt;/span&gt;
+    &lt;span class="cf-footer-separator"&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class="cf-footer-item"&gt;&lt;span&gt;Your IP&lt;/span&gt;: 49.207.208.80&lt;/span&gt;
+    &lt;span class="cf-footer-separator"&gt;&amp;bull;&lt;/span&gt;
+    &lt;span class="cf-footer-item"&gt;&lt;span&gt;Performance &amp;amp; security by&lt;/span&gt; &lt;a href="https://www.cloudflare.com/5xx-error-landing?utm_source=error_footer" id="brand_link" target="_blank"&gt;Cloudflare&lt;/a&gt;&lt;/span&gt;
+    
+  &lt;/p&gt;
+&lt;/div&gt;&lt;!-- /.error-footer --&gt;
+
+
+    &lt;/div&gt;&lt;!-- /#cf-error-details --&gt;
+&lt;/div&gt;&lt;!-- /#cf-wrapper --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+ 
+ </msg>
+<msg timestamp="20200818 16:10:39.311" level="INFO">C:\Users\CHANDRASEKHARJANGA\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'restcountries.eu'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  warnings.warn(</msg>
+<msg timestamp="20200818 16:10:39.312" level="INFO">${response} = &lt;Response [521]&gt;</msg>
+<status status="PASS" starttime="20200818 16:10:38.909" endtime="20200818 16:10:39.312"></status>
 </kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<doc>Get Value From JSON using JSONPath</doc>
+<kw name="To Json" library="RequestsLibrary">
+<doc>Convert a string to a JSON object</doc>
 <arguments>
-<arg>${json_obj}</arg>
-<arg>$.quiz.maths.q2.options[3]</arg>
+<arg>${response.content}</arg>
 </arguments>
 <assign>
-<var>${options.value}</var>
+<var>${json_object}</var>
 </assign>
-<msg timestamp="20200817 17:14:49.221" level="INFO">${options.value} = ['4']</msg>
-<status status="PASS" starttime="20200817 17:14:49.159" endtime="20200817 17:14:49.221"></status>
+<msg timestamp="20200818 16:10:39.316" level="FAIL">JSONDecodeError: Expecting value: line 1 column 1 (char 0)</msg>
+<status status="FAIL" starttime="20200818 16:10:39.313" endtime="20200818 16:10:39.316"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${options.value}</arg>
-</arguments>
-<status status="PASS" starttime="20200817 17:14:49.222" endtime="20200817 17:14:49.222"></status>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${options.value}[0]</arg>
-<arg>4</arg>
-</arguments>
-<status status="PASS" starttime="20200817 17:14:49.222" endtime="20200817 17:14:49.223"></status>
-</kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<doc>Get Value From JSON using JSONPath</doc>
-<arguments>
-<arg>${json_obj}</arg>
-<arg>$.quiz.maths.q2.options</arg>
-</arguments>
-<assign>
-<var>${question.value}</var>
-</assign>
-<msg timestamp="20200817 17:14:49.257" level="INFO">${question.value} = [['1', '2', '3', '4']]</msg>
-<status status="PASS" starttime="20200817 17:14:49.223" endtime="20200817 17:14:49.258"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${question.value}</arg>
-</arguments>
-<status status="PASS" starttime="20200817 17:14:49.258" endtime="20200817 17:14:49.259"></status>
-</kw>
-<kw name="Get Value From Json" library="JSONLibrary">
-<doc>Get Value From JSON using JSONPath</doc>
-<arguments>
-<arg>${json_obj}</arg>
-<arg>$.quiz.maths.q1.answer</arg>
-</arguments>
-<assign>
-<var>${answer.value}</var>
-</assign>
-<msg timestamp="20200817 17:14:49.295" level="INFO">${answer.value} = ['12']</msg>
-<status status="PASS" starttime="20200817 17:14:49.259" endtime="20200817 17:14:49.295"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${answer.value}</arg>
-</arguments>
-<status status="PASS" starttime="20200817 17:14:49.296" endtime="20200817 17:14:49.297"></status>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<doc>Fails if the given objects are unequal.</doc>
-<arguments>
-<arg>${answer.value}[0]</arg>
-<arg>12</arg>
-</arguments>
-<status status="PASS" starttime="20200817 17:14:49.297" endtime="20200817 17:14:49.298"></status>
-</kw>
-<status status="PASS" starttime="20200817 17:14:49.151" endtime="20200817 17:14:49.298" critical="yes"></status>
+<status status="FAIL" starttime="20200818 16:10:38.906" endtime="20200818 16:10:39.316" critical="yes">JSONDecodeError: Expecting value: line 1 column 1 (char 0)</status>
 </test>
-<status status="PASS" starttime="20200817 17:14:48.833" endtime="20200817 17:14:49.299"></status>
+<status status="FAIL" starttime="20200818 16:10:38.497" endtime="20200818 16:10:39.317"></status>
 </suite>
-<status status="PASS" starttime="20200817 17:14:48.830" endtime="20200817 17:14:49.301"></status>
+<status status="FAIL" starttime="20200818 16:10:38.493" endtime="20200818 16:10:39.321"></status>
 </suite>
-<status status="PASS" starttime="20200817 17:14:48.801" endtime="20200817 17:14:49.303"></status>
+<status status="FAIL" starttime="20200818 16:10:38.458" endtime="20200818 16:10:39.323"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
-<stat pass="1" fail="0" id="s1-s1" name="REST API Test Cases">FirstRobotProject.REST API Test Cases</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="TC005 ValidateJSONFile">FirstRobotProject.REST API Test Cases.TC005 ValidateJSONFile</stat>
+<stat pass="0" fail="1" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
+<stat pass="0" fail="1" id="s1-s1" name="REST API Test Cases">FirstRobotProject.REST API Test Cases</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="TC006 ValidateLiveJSONResponse">FirstRobotProject.REST API Test Cases.TC006 ValidateLiveJSONResponse</stat>
 </suite>
 </statistics>
 <errors>
