@@ -1,7 +1,7 @@
 *** Settings ***
-Library          SeleniumLibrary
-Variables        ../PageElements/Locators.py
-# Library    DataDriver    ../TestData/LoginData.xlsx    sheet_name=Sheet1
+Library         SeleniumLibrary
+Resource        ../PageElements/elements_LoginPage.robot
+Resource        ../PageElements/browser.robot
 
 *** Keywords ***
 Open My Browser
@@ -23,6 +23,9 @@ Click Submit Button
 Verify successful login
     Page Should Contain    Dashboard
     Title Should Be        OrangeHRM
-    
+
+Capture My Page Screenshot
+    Capture Page Screenshot        
+       
 Close My Browser
     Close All Browsers                 

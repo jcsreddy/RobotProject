@@ -1,19 +1,10 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource   ../Resources/KeyWords_Login.robot
-# Variables    ../PageElements/browser.py
+Resource   ../KeyWords/keywords_LoginPage.robot
 Library    DataDriver    ../TestData/LoginData.xlsx    sheet_name=Sheet1
-Test Template    Login Template
-
-*** Variables ***
-${url}                 
-${browser}     
-${username}    
-${password}    
+Test Template    Login Template 
 
 *** Test Cases ***
-Login Into Application     ${url}    ${browser}    ${username}    ${password}
-
+Login Into Application    ${url}    ${browser}    ${username}    ${password}
     
 *** Keywords ***
 Login Template
@@ -23,5 +14,5 @@ Login Template
     Enter Password    ${password}
     Click Submit Button
     Verify successful login
-    Capture Page Screenshot    
+    Capture My Page Screenshot    
     Close My Browser   
