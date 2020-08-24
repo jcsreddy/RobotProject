@@ -15,8 +15,12 @@ Login Template
     Enter The UserName    ${username}
     Enter The Password    ${password}
     Click The Login Button       
-    Capture My Page Screenshot
-    ${currentulr}    Get Location
-    Log    ${currentulr}      
-    Page Should Contain    Getting Started    
-    Close The Browser 
+    Capture My Screenshot
+    ${currenturl}    Get Location
+    Log    ${currenturl}            
+    Page Should Contain    Getting Started
+    Run Keyword If    'ForceCom' in '${currenturl}'     Switch to Lightning 
+    Capture My Screenshot   
+    Close The Browser
+Switch to Lightning
+    Click Element    xpath://a[@class='switch-to-lightning']

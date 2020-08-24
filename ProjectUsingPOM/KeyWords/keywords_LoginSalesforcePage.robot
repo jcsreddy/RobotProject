@@ -1,6 +1,6 @@
 *** Settings ***
-Library        SeleniumLibrary    
-Resource       ../PageObjects/pageobject_LoginSalesforce.robot
+Library    SeleniumLibrary    
+Resource    ../PageObjects/pageobject_LoginSalesforce.robot
 
 *** Keywords ***
 Open The Browser
@@ -19,7 +19,7 @@ Enter The Password
 Click The Login Button
     Click Button       ${clickbutton_Login}
     
-Capture My Page Screenshot
+Capture My Screenshot
     Capture Page Screenshot    
 
 Close The Browser
