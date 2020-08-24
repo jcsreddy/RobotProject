@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project name="RobotFramework" basedir="." default="run">
+	<description>
+		Simple Apache Ant example for running RobotFramework
+	</description>
+	
+	<property name="suite.dir" location="../TestCases/TC001_LoginTest.robot" />
+	<property name="docs.dir" location="../ProjectUsingPOM/Results" />
+	
+	<!-- set time -->
+	<target name="init">
+		<tstamp>
+			<format property="TODAY_DE" pattern="dd.MMMM.yyyy" locale="de" />
+		</tstamp>
+	</target>
+	
+	<!-- delete docs.dir -->
+	<target name="clean" depends="init">
+		<delete dir="${docs.dir}" />
+	</target>
+	
+	<!-- create docs.dir -->
+	<target name="setup" depends="clean">
+		<mkdir dir="${docs.dir}" />
+	</target>
+	
+	<!-- running testsuite -->
+	<target name="run" depends="setup">
+		<echo message="${TODAY_DE}" />
+		<exec executable="pybot">
+			<arg line="-d ${docs.dir}" />
+			<arg value="${suite.dir}" />
+		</exec>
+	</target>
+	
+</project>
