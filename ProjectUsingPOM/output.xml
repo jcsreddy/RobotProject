@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200824 16:54:19.296" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200824 17:15:16.899" rpa="false">
 <suite id="s1" name="ProjectUsingPOM" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM">
 <suite id="s1-s1" name="TestCases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases">
 <suite id="s1-s1-s1" name="TC002 SalesforceLogin" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC002_SalesforceLogin.robot">
@@ -22,14 +22,14 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200824 16:54:20.719" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com/'.</msg>
-<status status="PASS" starttime="20200824 16:54:20.719" endtime="20200824 16:54:26.395"></status>
+<msg timestamp="20200824 17:15:18.232" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com/'.</msg>
+<status status="PASS" starttime="20200824 17:15:18.231" endtime="20200824 17:15:23.838"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200824 16:54:26.395" endtime="20200824 16:54:28.742"></status>
+<status status="PASS" starttime="20200824 17:15:23.839" endtime="20200824 17:15:26.034"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:20.718" endtime="20200824 16:54:28.743"></status>
+<status status="PASS" starttime="20200824 17:15:18.231" endtime="20200824 17:15:26.035"></status>
 </kw>
 <kw name="Enter The UserName" library="keywords_LoginSalesforcePage">
 <arguments>
@@ -41,10 +41,10 @@
 <arg>${text_UserName}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200824 16:54:28.751" level="INFO">Typing text 'jcsreddy@gmail.com' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200824 16:54:28.750" endtime="20200824 16:54:28.941"></status>
+<msg timestamp="20200824 17:15:26.043" level="INFO">Typing text 'jcsreddy@gmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200824 17:15:26.040" endtime="20200824 17:15:26.335"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:28.743" endtime="20200824 16:54:28.941"></status>
+<status status="PASS" starttime="20200824 17:15:26.036" endtime="20200824 17:15:26.336"></status>
 </kw>
 <kw name="Enter The Password" library="keywords_LoginSalesforcePage">
 <arguments>
@@ -56,12 +56,12 @@
 <arg>${text_Password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200824 16:54:28.942" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200824 16:54:28.986" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200824 16:54:29.050" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200824 16:54:28.942" endtime="20200824 16:54:29.051"></status>
+<msg timestamp="20200824 17:15:26.339" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200824 17:15:26.390" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200824 17:15:26.469" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200824 17:15:26.338" endtime="20200824 17:15:26.470"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:28.941" endtime="20200824 16:54:29.052"></status>
+<status status="PASS" starttime="20200824 17:15:26.337" endtime="20200824 17:15:26.470"></status>
 </kw>
 <kw name="Click The Login Button" library="keywords_LoginSalesforcePage">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -69,35 +69,59 @@
 <arguments>
 <arg>${clickbutton_Login}</arg>
 </arguments>
-<msg timestamp="20200824 16:54:29.054" level="INFO">Clicking button 'name=Login'.</msg>
-<status status="PASS" starttime="20200824 16:54:29.053" endtime="20200824 16:54:31.996"></status>
+<msg timestamp="20200824 17:15:26.472" level="INFO">Clicking button 'name=Login'.</msg>
+<status status="PASS" starttime="20200824 17:15:26.472" endtime="20200824 17:15:29.275"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:29.052" endtime="20200824 16:54:31.997"></status>
+<status status="PASS" starttime="20200824 17:15:26.471" endtime="20200824 17:15:29.275"></status>
 </kw>
 <kw name="Capture My Page Screenshot" library="keywords_LoginSalesforcePage">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200824 16:54:36.328" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200824 16:54:31.999" endtime="20200824 16:54:36.329"></status>
+<msg timestamp="20200824 17:15:33.155" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200824 17:15:29.277" endtime="20200824 17:15:33.155"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:31.998" endtime="20200824 16:54:36.330"></status>
+<status status="PASS" starttime="20200824 17:15:29.276" endtime="20200824 17:15:33.156"></status>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${currentulr}</var>
+</assign>
+<msg timestamp="20200824 17:15:33.164" level="INFO">${currentulr} = https://ap16.salesforce.com/setup/forcecomHomepage.apexp?setupid=ForceCom</msg>
+<status status="PASS" starttime="20200824 17:15:33.157" endtime="20200824 17:15:33.164"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${currentulr}</arg>
+</arguments>
+<msg timestamp="20200824 17:15:33.165" level="INFO">https://ap16.salesforce.com/setup/forcecomHomepage.apexp?setupid=ForceCom</msg>
+<status status="PASS" starttime="20200824 17:15:33.165" endtime="20200824 17:15:33.165"></status>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<doc>Verifies that current page contains ``text``.</doc>
+<arguments>
+<arg>Getting Started</arg>
+</arguments>
+<msg timestamp="20200824 17:15:34.879" level="INFO">Current page contains text 'Getting Started'.</msg>
+<status status="PASS" starttime="20200824 17:15:33.166" endtime="20200824 17:15:34.880"></status>
 </kw>
 <kw name="Close The Browser" library="keywords_LoginSalesforcePage">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200824 16:54:36.331" endtime="20200824 16:54:38.683"></status>
+<status status="PASS" starttime="20200824 17:15:34.881" endtime="20200824 17:15:37.292"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:36.330" endtime="20200824 16:54:38.683"></status>
+<status status="PASS" starttime="20200824 17:15:34.880" endtime="20200824 17:15:37.293"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:20.718" endtime="20200824 16:54:38.683"></status>
+<status status="PASS" starttime="20200824 17:15:18.230" endtime="20200824 17:15:37.295"></status>
 </kw>
-<status status="PASS" starttime="20200824 16:54:20.717" endtime="20200824 16:54:38.684" critical="yes"></status>
+<status status="PASS" starttime="20200824 17:15:18.229" endtime="20200824 17:15:37.297" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200824 16:54:19.366" endtime="20200824 16:54:38.685"></status>
+<status status="PASS" starttime="20200824 17:15:16.969" endtime="20200824 17:15:37.302"></status>
 </suite>
-<status status="PASS" starttime="20200824 16:54:19.363" endtime="20200824 16:54:38.688"></status>
+<status status="PASS" starttime="20200824 17:15:16.966" endtime="20200824 17:15:37.313"></status>
 </suite>
-<status status="PASS" starttime="20200824 16:54:19.338" endtime="20200824 16:54:38.691"></status>
+<status status="PASS" starttime="20200824 17:15:16.938" endtime="20200824 17:15:37.317"></status>
 </suite>
 <statistics>
 <total>

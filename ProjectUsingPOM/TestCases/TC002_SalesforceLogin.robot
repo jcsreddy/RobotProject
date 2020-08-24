@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../PageObjects/pageobject_LoginSalesforce.robot
 Resource    ../KeyWords/keywords_LoginSalesforcePage.robot
-Library    DataDriver    ../TestData/LoginData_Salesforce.xlsx    sheet_name=Sheet1
+Library     DataDriver    ../TestData/LoginData_Salesforce.xlsx    sheet_name=Sheet1
 Test Template    Login Template
     
 *** Test Cases ***
@@ -15,5 +15,8 @@ Login Template
     Enter The UserName    ${username}
     Enter The Password    ${password}
     Click The Login Button       
-    Capture My Page Screenshot    
+    Capture My Page Screenshot
+    ${currentulr}    Get Location
+    Log    ${currentulr}      
+    Page Should Contain    Getting Started    
     Close The Browser 
