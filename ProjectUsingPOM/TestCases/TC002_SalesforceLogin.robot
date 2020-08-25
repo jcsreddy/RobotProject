@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 Resource    ../PageObjects/pageobject_LoginSalesforce.robot
 Resource    ../KeyWords/keywords_LoginSalesforcePage.robot
 Resource    ../KeyWords/keywords_SwitchToClassic.robot
