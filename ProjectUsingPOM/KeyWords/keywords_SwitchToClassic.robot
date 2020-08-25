@@ -9,6 +9,7 @@ Switch To Classic
     Wait Until Page Contains    Home    
     Click Element                    ${click_ViewProfile}
     Wait Until Page Contains    Log Out
+    Sleep    3    
     Wait Until Element Is Visible    ${click_SwitchToClassic}    
     Click Element                    ${click_SwitchToClassic}
     Page Should Contain    Switch to Lightning Experience

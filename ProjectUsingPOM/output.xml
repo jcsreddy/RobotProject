@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200825 11:14:34.206" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200825 12:22:14.189" rpa="false">
 <suite id="s1" name="ProjectUsingPOM" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM">
 <suite id="s1-s1" name="TestCases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases">
 <suite id="s1-s1-s1" name="TC002 SalesforceLogin" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC002_SalesforceLogin.robot">
@@ -14,14 +14,14 @@
 <arg>${url}</arg>
 <arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:35.388" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com/'.</msg>
-<status status="PASS" starttime="20200825 11:14:35.388" endtime="20200825 11:14:42.541"></status>
+<msg timestamp="20200825 12:22:15.106" level="INFO">Opening browser 'chrome' to base url 'https://login.salesforce.com/'.</msg>
+<status status="PASS" starttime="20200825 12:22:15.106" endtime="20200825 12:22:21.720"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20200825 11:14:42.542" endtime="20200825 11:14:44.689"></status>
+<status status="PASS" starttime="20200825 12:22:21.721" endtime="20200825 12:22:23.884"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:35.386" endtime="20200825 11:14:44.690"></status>
+<status status="PASS" starttime="20200825 12:22:15.105" endtime="20200825 12:22:23.885"></status>
 </kw>
 <test id="s1-s1-s1-t1" name="Login Salesforce Test">
 <kw name="Login Template">
@@ -41,10 +41,10 @@
 <arg>${text_UserName}</arg>
 <arg>${username}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:44.696" level="INFO">Typing text 'jcsreddy@gmail.com' into text field 'id=username'.</msg>
-<status status="PASS" starttime="20200825 11:14:44.695" endtime="20200825 11:14:44.934"></status>
+<msg timestamp="20200825 12:22:23.890" level="INFO">Typing text 'jcsreddy@gmail.com' into text field 'id=username'.</msg>
+<status status="PASS" starttime="20200825 12:22:23.889" endtime="20200825 12:22:24.119"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:44.693" endtime="20200825 11:14:44.935"></status>
+<status status="PASS" starttime="20200825 12:22:23.888" endtime="20200825 12:22:24.119"></status>
 </kw>
 <kw name="Enter The Password" library="keywords_LoginSalesforcePage">
 <arguments>
@@ -56,12 +56,12 @@
 <arg>${text_Password}</arg>
 <arg>${password}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:44.937" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20200825 11:14:44.982" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20200825 11:14:45.059" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20200825 11:14:44.936" endtime="20200825 11:14:45.059"></status>
+<msg timestamp="20200825 12:22:24.120" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20200825 12:22:24.166" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200825 12:22:24.256" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200825 12:22:24.120" endtime="20200825 12:22:24.257"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:44.935" endtime="20200825 11:14:45.060"></status>
+<status status="PASS" starttime="20200825 12:22:24.119" endtime="20200825 12:22:24.259"></status>
 </kw>
 <kw name="Click The Login Button" library="keywords_LoginSalesforcePage">
 <kw name="Click Button" library="SeleniumLibrary">
@@ -69,26 +69,26 @@
 <arguments>
 <arg>${clickbutton_Login}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:45.063" level="INFO">Clicking button 'name=Login'.</msg>
-<status status="PASS" starttime="20200825 11:14:45.062" endtime="20200825 11:14:48.901"></status>
+<msg timestamp="20200825 12:22:24.261" level="INFO">Clicking button 'name=Login'.</msg>
+<status status="PASS" starttime="20200825 12:22:24.261" endtime="20200825 12:22:27.795"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:45.061" endtime="20200825 11:14:48.901"></status>
+<status status="PASS" starttime="20200825 12:22:24.260" endtime="20200825 12:22:27.796"></status>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <doc>Returns the current browser window URL.</doc>
 <assign>
 <var>${currenturl}</var>
 </assign>
-<msg timestamp="20200825 11:14:53.485" level="INFO">${currenturl} = https://ap16.lightning.force.com/lightning/setup/SetupOneHome/home</msg>
-<status status="PASS" starttime="20200825 11:14:48.902" endtime="20200825 11:14:53.486"></status>
+<msg timestamp="20200825 12:22:31.654" level="INFO">${currenturl} = https://ap16.lightning.force.com/lightning/setup/SetupOneHome/home</msg>
+<status status="PASS" starttime="20200825 12:22:27.796" endtime="20200825 12:22:31.655"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${currenturl}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:53.487" level="INFO">https://ap16.lightning.force.com/lightning/setup/SetupOneHome/home</msg>
-<status status="PASS" starttime="20200825 11:14:53.486" endtime="20200825 11:14:53.487"></status>
+<msg timestamp="20200825 12:22:31.660" level="INFO">https://ap16.lightning.force.com/lightning/setup/SetupOneHome/home</msg>
+<status status="PASS" starttime="20200825 12:22:31.657" endtime="20200825 12:22:31.660"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -102,76 +102,84 @@
 <arguments>
 <arg>We are into Switch To Classic</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:14:53.489" endtime="20200825 11:14:53.489"></status>
+<status status="PASS" starttime="20200825 12:22:31.664" endtime="20200825 12:22:31.665"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${click_ViewProfile}</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:14:53.489" endtime="20200825 11:14:55.782"></status>
+<status status="PASS" starttime="20200825 12:22:31.665" endtime="20200825 12:22:33.733"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Home</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:14:55.782" endtime="20200825 11:14:55.805"></status>
+<status status="PASS" starttime="20200825 12:22:33.733" endtime="20200825 12:22:33.752"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${click_ViewProfile}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:55.806" level="INFO">Clicking element '//div[@class='profileTrigger branding-user-profile bgimg slds-avatar slds-avatar_profile-image-small circular forceEntityIcon']//span[@class='uiImage']'.</msg>
-<status status="PASS" starttime="20200825 11:14:55.806" endtime="20200825 11:14:55.903"></status>
+<msg timestamp="20200825 12:22:33.753" level="INFO">Clicking element '//div[@class='profileTrigger branding-user-profile bgimg slds-avatar slds-avatar_profile-image-small circular forceEntityIcon']//span[@class='uiImage']'.</msg>
+<status status="PASS" starttime="20200825 12:22:33.753" endtime="20200825 12:22:33.898"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Log Out</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:14:55.903" endtime="20200825 11:14:55.921"></status>
+<status status="PASS" starttime="20200825 12:22:33.899" endtime="20200825 12:22:34.254"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20200825 12:22:37.257" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200825 12:22:34.255" endtime="20200825 12:22:37.257"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${click_SwitchToClassic}</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:14:55.922" endtime="20200825 11:14:56.200"></status>
+<status status="PASS" starttime="20200825 12:22:37.258" endtime="20200825 12:22:37.377"></status>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <doc>Click the element identified by ``locator``.</doc>
 <arguments>
 <arg>${click_SwitchToClassic}</arg>
 </arguments>
-<msg timestamp="20200825 11:14:56.201" level="INFO">Clicking element 'xpath://a[text()='Switch to Salesforce Classic']'.</msg>
-<status status="PASS" starttime="20200825 11:14:56.200" endtime="20200825 11:15:02.429"></status>
+<msg timestamp="20200825 12:22:37.378" level="INFO">Clicking element 'xpath://a[text()='Switch to Salesforce Classic']'.</msg>
+<status status="PASS" starttime="20200825 12:22:37.377" endtime="20200825 12:22:44.247"></status>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <doc>Verifies that current page contains ``text``.</doc>
 <arguments>
 <arg>Switch to Lightning Experience</arg>
 </arguments>
-<msg timestamp="20200825 11:15:02.460" level="INFO">Current page contains text 'Switch to Lightning Experience'.</msg>
-<status status="PASS" starttime="20200825 11:15:02.430" endtime="20200825 11:15:02.460"></status>
+<msg timestamp="20200825 12:22:44.272" level="INFO">Current page contains text 'Switch to Lightning Experience'.</msg>
+<status status="PASS" starttime="20200825 12:22:44.248" endtime="20200825 12:22:44.272"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200825 11:15:02.988" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200825 11:15:02.460" endtime="20200825 11:15:02.988"></status>
+<msg timestamp="20200825 12:22:44.647" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200825 12:22:44.272" endtime="20200825 12:22:44.647"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:53.488" endtime="20200825 11:15:02.989"></status>
+<status status="PASS" starttime="20200825 12:22:31.663" endtime="20200825 12:22:44.648"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:53.488" endtime="20200825 11:15:02.989"></status>
+<status status="PASS" starttime="20200825 12:22:31.661" endtime="20200825 12:22:44.648"></status>
 </kw>
 <kw name="Get Location" library="SeleniumLibrary">
 <doc>Returns the current browser window URL.</doc>
 <assign>
 <var>${currenturl}</var>
 </assign>
-<msg timestamp="20200825 11:15:03.078" level="INFO">${currenturl} = https://ap16.salesforce.com/home/home.jsp?source=lex</msg>
-<status status="PASS" starttime="20200825 11:15:02.990" endtime="20200825 11:15:03.078"></status>
+<msg timestamp="20200825 12:22:44.673" level="INFO">${currenturl} = https://ap16.salesforce.com/home/home.jsp?source=lex</msg>
+<status status="PASS" starttime="20200825 12:22:44.649" endtime="20200825 12:22:44.673"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -185,48 +193,48 @@
 <arguments>
 <arg>${click_SwitchToLightning}</arg>
 </arguments>
-<msg timestamp="20200825 11:15:03.080" level="INFO">Clicking element 'xpath://a[@class='switch-to-lightning']'.</msg>
-<status status="PASS" starttime="20200825 11:15:03.079" endtime="20200825 11:15:03.255"></status>
+<msg timestamp="20200825 12:22:44.674" level="INFO">Clicking element 'xpath://a[@class='switch-to-lightning']'.</msg>
+<status status="PASS" starttime="20200825 12:22:44.674" endtime="20200825 12:22:44.757"></status>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <doc>Waits until the element ``locator`` is visible.</doc>
 <arguments>
 <arg>${click_ViewProfile}</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:15:03.256" endtime="20200825 11:15:07.242"></status>
+<status status="PASS" starttime="20200825 12:22:44.757" endtime="20200825 12:22:48.224"></status>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <doc>Waits until ``text`` appears on the current page.</doc>
 <arguments>
 <arg>Home</arg>
 </arguments>
-<status status="PASS" starttime="20200825 11:15:07.243" endtime="20200825 11:15:07.501"></status>
+<status status="PASS" starttime="20200825 12:22:48.225" endtime="20200825 12:22:48.246"></status>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20200825 11:15:08.041" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20200825 11:15:07.502" endtime="20200825 11:15:08.042"></status>
+<msg timestamp="20200825 12:22:49.013" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200825 12:22:48.246" endtime="20200825 12:22:49.014"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:15:03.079" endtime="20200825 11:15:08.043"></status>
+<status status="PASS" starttime="20200825 12:22:44.674" endtime="20200825 12:22:49.015"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:15:03.079" endtime="20200825 11:15:08.043"></status>
+<status status="PASS" starttime="20200825 12:22:44.673" endtime="20200825 12:22:49.015"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:44.692" endtime="20200825 11:15:08.044"></status>
+<status status="PASS" starttime="20200825 12:22:23.886" endtime="20200825 12:22:49.016"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:44.690" endtime="20200825 11:15:08.045" critical="yes"></status>
+<status status="PASS" starttime="20200825 12:22:23.885" endtime="20200825 12:22:49.018" critical="yes"></status>
 </test>
 <kw name="Close The Browser" library="keywords_LoginSalesforcePage" type="teardown">
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20200825 11:15:08.048" endtime="20200825 11:15:10.418"></status>
+<status status="PASS" starttime="20200825 12:22:49.022" endtime="20200825 12:22:52.194"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:15:08.047" endtime="20200825 11:15:10.418"></status>
+<status status="PASS" starttime="20200825 12:22:49.021" endtime="20200825 12:22:52.196"></status>
 </kw>
-<status status="PASS" starttime="20200825 11:14:34.293" endtime="20200825 11:15:10.419"></status>
+<status status="PASS" starttime="20200825 12:22:14.257" endtime="20200825 12:22:52.196"></status>
 </suite>
-<status status="PASS" starttime="20200825 11:14:34.290" endtime="20200825 11:15:10.421"></status>
+<status status="PASS" starttime="20200825 12:22:14.254" endtime="20200825 12:22:52.207"></status>
 </suite>
-<status status="PASS" starttime="20200825 11:14:34.258" endtime="20200825 11:15:10.423"></status>
+<status status="PASS" starttime="20200825 12:22:14.231" endtime="20200825 12:22:52.212"></status>
 </suite>
 <statistics>
 <total>
