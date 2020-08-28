@@ -1,5 +1,6 @@
 *** settings ***
 Library     SeleniumLibrary
+Library    Dialogs    
 
 *** Variables ***
 ${browser}      chrome
@@ -14,7 +15,7 @@ Validate Checkbox Radiobutton List Dropdown
     #Selecting Radio button by Name and Value
     select radio button  sex    Female
     select radio button  exp    4
-
+    Dialogs.Pause Execution
     #Selecting Checkbox by Name
     select checkbox        BlackTea
     select checkbox        oolongtea
