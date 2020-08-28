@@ -3,20 +3,20 @@ Library    SeleniumLibrary
 Resource    keywords_LoginSalesforcePage.robot
 
 *** Keywords ***
-Switch To Lightning Page
-    ${currenturl}    Get Location
-    Log    ${currenturl}            
-    Run Keyword If    'salesforce.com' in '${currenturl}'
-    ...     Click Element    ${click_SwitchToLightning}
-            Wait Until Element Is Visible    ${click_ViewProfile}
-            Wait Until Page Contains    Home    
-            Capture Page Screenshot
+# Switch To Lightning Page
+    # ${currenturl}    Get Location
+    # Log    ${currenturl}            
+    # Run Keyword If    'salesforce.com' in '${currenturl}'
+    # ...     Click Element    ${click_SwitchToLightning}
+            # Wait Until Element Is Visible    ${click_ViewProfile}
+            # Wait Until Page Contains    Home    
+            # Capture Page Screenshot
     
-# Login Into Application
-    # # [Arguments]           ${url}        ${browser}        ${username}        ${password}    
-    # Enter The UserName    ${username}
-    # Enter The Password    ${password}
-    # Click The Login Button
+Login Into Application
+    # [Arguments]           ${url}        ${browser}        ${username}        ${password}    
+    Enter The UserName    ${username}
+    Enter The Password    ${password}
+    Click The Login Button
                
 # Switch To Opportunies Page
     # # Sleep    5
