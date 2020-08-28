@@ -1,29 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200825 16:21:29.277" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200828 13:18:07.623" rpa="false">
 <suite id="s1" name="ProjectUsingPOM" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM">
 <suite id="s1-s1" name="TestCases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases">
-<suite id="s1-s1-s1" name="TC003" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC003.robot">
-<test id="s1-s1-s1-t1" name="SampleTest">
-<kw name="Open Browser" library="SeleniumLibrary">
-<doc>Opens a new browser instance to the optional ``url``.</doc>
+<suite id="s1-s1-s1" name="TC004 DateTime" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\ProjectUsingPOM\TestCases\TC004_DateTime.robot">
+<test id="s1-s1-s1-t1" name="DateAndTime">
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.943" level="INFO">${date} = 2020-08-28 13:18:07</msg>
+<status status="PASS" starttime="20200828 13:18:07.942" endtime="20200828 13:18:07.943"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
 <arguments>
-<arg>https://google.com</arg>
-<arg>chrome</arg>
+<arg>${date}</arg>
+<arg>14 days</arg>
 </arguments>
-<msg timestamp="20200825 16:21:29.929" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
-<status status="PASS" starttime="20200825 16:21:29.928" endtime="20200825 16:21:35.451"></status>
+<assign>
+<var>${plus14}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.948" level="INFO">${plus14} = 2020-09-11 13:18:07.000</msg>
+<status status="PASS" starttime="20200828 13:18:07.943" endtime="20200828 13:18:07.948"></status>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20200825 16:21:35.452" endtime="20200825 16:21:38.023"></status>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${plus14}</arg>
+</arguments>
+<status status="PASS" starttime="20200828 13:18:07.948" endtime="20200828 13:18:07.949"></status>
 </kw>
-<status status="PASS" starttime="20200825 16:21:29.927" endtime="20200825 16:21:38.023" critical="yes"></status>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${plus14}</arg>
+<arg>result_format=%m/%d/%Y</arg>
+</arguments>
+<assign>
+<var>${dateinMM/DD/YY}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.949" level="INFO">${dateinMM/DD/YY} = 09/11/2020</msg>
+<status status="PASS" starttime="20200828 13:18:07.949" endtime="20200828 13:18:07.950"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${dateinMM/DD/YY}</arg>
+</arguments>
+<status status="PASS" starttime="20200828 13:18:07.950" endtime="20200828 13:18:07.950"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${plus14}</arg>
+<arg>result_format=%d-%m-%Y</arg>
+</arguments>
+<assign>
+<var>${dateinDD-MM-YY}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.951" level="INFO">${dateinDD-MM-YY} = 11-09-2020</msg>
+<status status="PASS" starttime="20200828 13:18:07.950" endtime="20200828 13:18:07.951"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Date is...</arg>
+<arg>${dateinDD-MM-YY}</arg>
+</arguments>
+<status status="PASS" starttime="20200828 13:18:07.951" endtime="20200828 13:18:07.951"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dateinDD-MM-YY}</arg>
+</arguments>
+<msg timestamp="20200828 13:18:07.952" level="INFO">11-09-2020</msg>
+<status status="PASS" starttime="20200828 13:18:07.952" endtime="20200828 13:18:07.952"></status>
+</kw>
+<kw name="Get Time" library="BuiltIn">
+<doc>Returns the given time in the requested format.</doc>
+<assign>
+<var>${NOW}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.953" level="INFO">${NOW} = 2020-08-28 13:18:07</msg>
+<status status="PASS" starttime="20200828 13:18:07.953" endtime="20200828 13:18:07.953"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${NOW}</arg>
+<arg>result_format=%d-%b-%Y %I-%M %p</arg>
+</arguments>
+<assign>
+<var>${dateinDD-MMM-YY}</var>
+</assign>
+<msg timestamp="20200828 13:18:07.954" level="INFO">${dateinDD-MMM-YY} = 28-Aug-2020 01-18 PM</msg>
+<status status="PASS" starttime="20200828 13:18:07.953" endtime="20200828 13:18:07.954"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${dateinDD-MMM-YY}</arg>
+</arguments>
+<status status="PASS" starttime="20200828 13:18:07.954" endtime="20200828 13:18:07.955"></status>
+</kw>
+<status status="PASS" starttime="20200828 13:18:07.941" endtime="20200828 13:18:07.955" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200825 16:21:29.368" endtime="20200825 16:21:38.026"></status>
+<status status="PASS" starttime="20200828 13:18:07.696" endtime="20200828 13:18:07.955"></status>
 </suite>
-<status status="PASS" starttime="20200825 16:21:29.362" endtime="20200825 16:21:38.031"></status>
+<status status="PASS" starttime="20200828 13:18:07.693" endtime="20200828 13:18:07.957"></status>
 </suite>
-<status status="PASS" starttime="20200825 16:21:29.328" endtime="20200825 16:21:38.034"></status>
+<status status="PASS" starttime="20200828 13:18:07.667" endtime="20200828 13:18:07.957"></status>
 </suite>
 <statistics>
 <total>
@@ -35,7 +123,7 @@
 <suite>
 <stat pass="1" fail="0" id="s1" name="ProjectUsingPOM">ProjectUsingPOM</stat>
 <stat pass="1" fail="0" id="s1-s1" name="TestCases">ProjectUsingPOM.TestCases</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="TC003">ProjectUsingPOM.TestCases.TC003</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="TC004 DateTime">ProjectUsingPOM.TestCases.TC004 DateTime</stat>
 </suite>
 </statistics>
 <errors>
