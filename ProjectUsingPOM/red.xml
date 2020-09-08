@@ -5,6 +5,8 @@
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/SeleniumLibrary/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="ExcelDataDriver" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/ExcelDataDriver/__init__.py" dynamic="false"/>
     <referencedLibrary type="PYTHON" name="DataDriver" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/DataDriver/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="webdriver_manager" path="C:/Users/CHANDRASEKHARJANGA/AppData/Local/Programs/Python/Python38-32/Lib/site-packages/webdriver_manager/__init__.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="browser" path="ProjectUsingPOM/PageElements/browser.py" dynamic="false"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

@@ -22,4 +22,4 @@ Login Template
     Log    ${currenturl}            
     Run Keyword If    'lightning.force.com' in '${currenturl}'    Switch To Classic
     ${currenturl}    Get Location    
-    Run Keyword If    'salesforce.com' in '${currenturl}'     Switch To Lightning
+    Run Keyword If    'salesforce.com' in '${currenturl}'     Switch To Lightning Page

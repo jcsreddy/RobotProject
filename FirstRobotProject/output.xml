@@ -1,85 +1,147 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200820 15:13:57.036" rpa="false">
+<robot generator="Robot 3.2.1 (Python 3.8.5 on win32)" generated="20200828 17:21:53.883" rpa="false">
 <suite id="s1" name="FirstRobotProject" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject">
-<suite id="s1-s1" name="REST API Test Cases" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases">
-<suite id="s1-s1-s1" name="TC012 APIKeyTest" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\REST API Test Cases\TC012_APIKeyTest.robot">
-<test id="s1-s1-s1-t1" name="APIKeyTest">
-<kw name="Create Session" library="RequestsLibrary">
-<doc>Create Session: create a HTTP session to a server</doc>
+<suite id="s1-s1" name="Tests" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests">
+<suite id="s1-s1-s1" name="TC002 RadioCheckboxDropdown List" source="C:\Users\CHANDRASEKHARJANGA\git\RobotProject\FirstRobotProject\tests\TC002_RadioCheckboxDropdown_List.robot">
+<test id="s1-s1-s1-t1" name="Validate Checkbox Radiobutton List Dropdown">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
 <arguments>
-<arg>mysession</arg>
-<arg>${baseurl}</arg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
 </arguments>
-<msg timestamp="20200820 15:13:57.315" level="INFO">Creating Session using : alias=mysession, url=https://maps.googleapis.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200820 15:13:57.315" endtime="20200820 15:13:57.315"></status>
+<msg timestamp="20200828 17:21:54.293" level="INFO">Opening browser 'chrome' to base url 'http://www.practiceselenium.com/practice-form.html'.</msg>
+<status status="PASS" starttime="20200828 17:21:54.292" endtime="20200828 17:22:12.820"></status>
 </kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200828 17:22:12.820" endtime="20200828 17:22:14.971"></status>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
 <arguments>
-<arg>location=-33.8670522,151.1957362</arg>
-<arg>radius=500</arg>
-<arg>types=food</arg>
-<arg>name=harbour</arg>
-<arg>key=${APIKey}</arg>
+<arg>sex</arg>
+<arg>Female</arg>
 </arguments>
-<assign>
-<var>${params}</var>
-</assign>
-<msg timestamp="20200820 15:13:57.320" level="INFO">${params} = {'location': '-33.8670522,151.1957362', 'radius': '500', 'types': 'food', 'name': 'harbour', 'key': 'AIzaSyBEKpaVIEwswSc2tKVuIX8aexeLUYbWN1E'}</msg>
-<status status="PASS" starttime="20200820 15:13:57.318" endtime="20200820 15:13:57.321"></status>
+<msg timestamp="20200828 17:22:14.976" level="INFO">Selecting 'Female' from radio button 'sex'.</msg>
+<status status="PASS" starttime="20200828 17:22:14.973" endtime="20200828 17:22:15.101"></status>
 </kw>
-<kw name="Get Request" library="RequestsLibrary">
-<doc>Send a GET request on the session object found using the
-given `alias`</doc>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
 <arguments>
-<arg>mysession</arg>
-<arg>${requesturi}</arg>
-<arg>params=${params}</arg>
+<arg>exp</arg>
+<arg>4</arg>
 </arguments>
-<assign>
-<var>${response}</var>
-</assign>
-<msg timestamp="20200820 15:13:57.592" level="INFO">GET Request : url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyBEKpaVIEwswSc2tKVuIX8aexeLUYbWN1E 
- path_url=/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyBEKpaVIEwswSc2tKVuIX8aexeLUYbWN1E 
- headers={'User-Agent': 'python-requests/2.24.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg timestamp="20200820 15:13:57.593" level="INFO">GET Response : url=https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=-33.8670522%2C151.1957362&amp;radius=500&amp;types=food&amp;name=harbour&amp;key=AIzaSyBEKpaVIEwswSc2tKVuIX8aexeLUYbWN1E 
- status=200, reason=OK 
- body={
-   "error_message" : "This API project is not authorized to use this API.",
-   "html_attributions" : [],
-   "results" : [],
-   "status" : "REQUEST_DENIED"
-}
- 
- </msg>
-<msg timestamp="20200820 15:13:57.594" level="INFO">C:\Users\CHANDRASEKHARJANGA\AppData\Local\Programs\Python\Python38-32\Lib\site-packages\urllib3\connectionpool.py:981: InsecureRequestWarning: Unverified HTTPS request is being made to host 'maps.googleapis.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
-  warnings.warn(</msg>
-<msg timestamp="20200820 15:13:57.595" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200820 15:13:57.329" endtime="20200820 15:13:57.595"></status>
+<msg timestamp="20200828 17:22:15.103" level="INFO">Selecting '4' from radio button 'exp'.</msg>
+<status status="PASS" starttime="20200828 17:22:15.102" endtime="20200828 17:22:15.210"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Pause Execution" library="Dialogs">
+<doc>Pauses test execution until user clicks ``Ok`` button.</doc>
+<status status="PASS" starttime="20200828 17:22:15.211" endtime="20200828 17:23:06.149"></status>
+</kw>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
 <arguments>
-<arg>${response.status_code}</arg>
+<arg>BlackTea</arg>
 </arguments>
-<status status="PASS" starttime="20200820 15:13:57.596" endtime="20200820 15:13:57.597"></status>
+<msg timestamp="20200828 17:23:06.151" level="INFO">Selecting checkbox 'BlackTea'.</msg>
+<status status="PASS" starttime="20200828 17:23:06.150" endtime="20200828 17:23:06.261"></status>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<doc>Selects the checkbox identified by ``locator``.</doc>
 <arguments>
-<arg>${response.content}</arg>
+<arg>oolongtea</arg>
 </arguments>
-<status status="PASS" starttime="20200820 15:13:57.598" endtime="20200820 15:13:57.599"></status>
+<msg timestamp="20200828 17:23:06.262" level="INFO">Selecting checkbox 'oolongtea'.</msg>
+<status status="PASS" starttime="20200828 17:23:06.261" endtime="20200828 17:23:06.374"></status>
 </kw>
-<status status="PASS" starttime="20200820 15:13:57.314" endtime="20200820 15:13:57.600" critical="yes"></status>
+<kw name="Unselect Checkbox" library="SeleniumLibrary">
+<doc>Removes the selection of checkbox identified by ``locator``.</doc>
+<arguments>
+<arg>BlackTea</arg>
+</arguments>
+<msg timestamp="20200828 17:23:06.376" level="INFO">Unselecting checkbox 'BlackTea'.</msg>
+<status status="PASS" starttime="20200828 17:23:06.375" endtime="20200828 17:23:06.472"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>continents</arg>
+<arg>Australia</arg>
+</arguments>
+<msg timestamp="20200828 17:23:06.473" level="INFO">Selecting options from selection list 'continents' by label Australia.</msg>
+<status status="PASS" starttime="20200828 17:23:06.473" endtime="20200828 17:23:06.582"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>continents</arg>
+<arg>North America</arg>
+</arguments>
+<msg timestamp="20200828 17:23:06.583" level="INFO">Selecting options from selection list 'continents' by label North America.</msg>
+<status status="PASS" starttime="20200828 17:23:06.583" endtime="20200828 17:23:06.675"></status>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<arguments>
+<arg>continents</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20200828 17:23:06.676" level="INFO">Selecting options from selection list 'continents' by index 1.</msg>
+<status status="PASS" starttime="20200828 17:23:06.676" endtime="20200828 17:23:06.754"></status>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>selenium_commands</arg>
+<arg>Switch Commands</arg>
+<arg>Navigation Commands</arg>
+<arg>Wait Commands</arg>
+</arguments>
+<msg timestamp="20200828 17:23:06.755" level="INFO">Selecting options from selection list 'selenium_commands' by labels Switch Commands, Navigation Commands, Wait Commands.</msg>
+<status status="PASS" starttime="20200828 17:23:06.754" endtime="20200828 17:23:06.922"></status>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<arguments>
+<arg>name=selenium_commands</arg>
+</arguments>
+<msg timestamp="20200828 17:23:07.383" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-element-screenshot-1.png"&gt;&lt;img src="selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200828 17:23:06.923" endtime="20200828 17:23:07.383"></status>
+</kw>
+<kw name="Unselect From List By Label" library="SeleniumLibrary">
+<doc>Unselects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>selenium_commands</arg>
+<arg>Switch Commands</arg>
+</arguments>
+<msg timestamp="20200828 17:23:07.384" level="INFO">Un-selecting options from selection list 'selenium_commands' by label Switch Commands.</msg>
+<status status="PASS" starttime="20200828 17:23:07.384" endtime="20200828 17:23:07.600"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200828 17:23:07.894" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200828 17:23:07.601" endtime="20200828 17:23:07.895"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Test Completed</arg>
+</arguments>
+<msg timestamp="20200828 17:23:07.896" level="INFO">Test Completed</msg>
+<status status="PASS" starttime="20200828 17:23:07.895" endtime="20200828 17:23:07.896"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200828 17:23:07.897" endtime="20200828 17:23:10.150"></status>
+</kw>
+<status status="PASS" starttime="20200828 17:21:54.291" endtime="20200828 17:23:10.151" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200820 15:13:57.111" endtime="20200820 15:13:57.602"></status>
+<status status="PASS" starttime="20200828 17:21:53.955" endtime="20200828 17:23:10.154"></status>
 </suite>
-<status status="PASS" starttime="20200820 15:13:57.107" endtime="20200820 15:13:57.606"></status>
+<status status="PASS" starttime="20200828 17:21:53.952" endtime="20200828 17:23:10.160"></status>
 </suite>
-<status status="PASS" starttime="20200820 15:13:57.080" endtime="20200820 15:13:57.608"></status>
+<status status="PASS" starttime="20200828 17:21:53.926" endtime="20200828 17:23:10.165"></status>
 </suite>
 <statistics>
 <total>
@@ -90,8 +152,8 @@ given `alias`</doc>
 </tag>
 <suite>
 <stat pass="1" fail="0" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
-<stat pass="1" fail="0" id="s1-s1" name="REST API Test Cases">FirstRobotProject.REST API Test Cases</stat>
-<stat pass="1" fail="0" id="s1-s1-s1" name="TC012 APIKeyTest">FirstRobotProject.REST API Test Cases.TC012 APIKeyTest</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Tests">FirstRobotProject.Tests</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="TC002 RadioCheckboxDropdown List">FirstRobotProject.Tests.TC002 RadioCheckboxDropdown List</stat>
 </suite>
 </statistics>
 <errors>

@@ -1,5 +1,9 @@
-datasources:03297d18968dd1b6392cc84a130e31a0efdab8a0
-commandlineoptions:0ea5e2ea38626eb0ba4c01f25b8401101807c72a
+datasources:e3b585496add55d3a0ec7d4a39e514ea0c57ea65
+commandlineoptions:f7fef5bbbc061a27b71d7997162f25b427e0daf8
 suitesfrom:no-suites-from-option
-file:a6abb48f37497508810a8d11f60f57d24f1b12f3
---suite TC001 LoginTest
+file:96552213acb5336e18e164a3cc89e7aaa4dcb649
+--suite Suites.TC001 LoginTest
+--suite Suites.TC002 SalesforceLogin
+--suite Suites.TC003 Calculations
+--suite Suites.TC004 DateTime
+--suite Suites.TC005 OpportunityCreation

@@ -21,6 +21,7 @@ Login Salesforce Test
     Switch To Opportunies Page
     # Dialogs.Pause Execution
     # Sleep  5 
+    
     Wait Until Page Contains    New    
     Wait Until Page Contains    Opportunity Name
     Wait Until Page Contains    Account Name      
