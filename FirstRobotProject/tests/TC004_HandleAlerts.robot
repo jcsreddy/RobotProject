@@ -13,7 +13,7 @@ Handle Alerts
     open browser        http://testautomationpractice.blogspot.com          chrome
     maximize browser window
     click element   xpath=//button[text()='Click Me']
-    set selenium speed      3
+    set selenium speed      2
 #    handle alert    leave
     alert should be present     Press a button!
     click element   xpath=//button[text()='Click Me']

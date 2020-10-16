@@ -24,7 +24,7 @@
 		<mkdir dir="${docs.dir}" />
 	</target>
 	
-	<!-- running testsuite -->
+	<!-- running TestSuite -->
 	<target name="run" depends="setup">
 		<echo message="${TODAY_DE}" />
 		<exec executable="pybot">

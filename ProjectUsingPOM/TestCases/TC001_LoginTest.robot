@@ -19,3 +19,4 @@ Login Template
     Verify successful login
     Capture My Page Screenshot    
     # Close My Browser   
+    
