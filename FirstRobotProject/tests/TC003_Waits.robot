@@ -34,7 +34,7 @@ Implicit Wait Test
     open browser        http://demowebshop.tricentis.com/register          chrome
     ${implicit_selenium_wait}     get selenium implicit wait
     log to console                  ${implicit_selenium_wait}
-    set selenium implicit wait      5 seconds
+    set selenium implicit wait      3 seconds    #changed speed from 6 to 3 seconds
     wait until page contains    Register
     select radio button      Gender      M
     input text              FirstName       sekhar
